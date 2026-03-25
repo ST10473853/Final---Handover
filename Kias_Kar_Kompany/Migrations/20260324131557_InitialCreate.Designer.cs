@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kias_Kar_Kompany.Migrations
 {
     [DbContext(typeof(Kias_Kar_KompanyContext))]
-    [Migration("20260324120416_InitialCreate")]
+    [Migration("20260324131557_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

@@ -36,7 +36,7 @@ namespace Kias_Kar_Kompany.Controllers
             {
                 return NotFound();
             }
-            return View();
+            return View(vehicle);
         }
 
         // GET: VehiclesController/Create
