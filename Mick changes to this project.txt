@@ -1,0 +1,26 @@
+- Added another model called Manufacturer
+- 1 manufacturer can manufacture many cars
+- only 1 car can be manufactured by 1 manufacturer
+
+- Assign a default: = "Sedan"
+
+//Vehicle Model
+
+
+
+
+
+// Manufacturer Model
+
+[key]
+public int Id {get; set; }
+
+[Required]
+public string Manufacturer_Name {get; set; } = string.Empty;
+
+public string? Manufactuer_Country {get; set; } 
+
+public List <Vehicle>? Vehicles {get; set; }
+
+
+
