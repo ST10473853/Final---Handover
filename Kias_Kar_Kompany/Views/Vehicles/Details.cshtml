@@ -1,48 +1,45 @@
 ﻿@model Kias_Kar_Kompany.Models.Vehicle
 
-
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Vehicle Details";
 }
 
-<h1>Details</h1>
+<div class="container mt-4">
 
-<div>
-    <h4>Vehicle</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.VehicleId)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.VehicleId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VehicleName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VehicleName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VehicleModel)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VehicleModel)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VehiclePrice)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VehiclePrice)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.VehicleType)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.VehicleType)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Index">Back to List</a>
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">🚘 Vehicle Details</h3>
+        </div>
+
+        <div class="card-body">
+
+            <dl class="row">
+
+                <dt class="col-sm-3">Vehicle ID</dt>
+                <dd class="col-sm-9">@Model.VehicleId</dd>
+
+                <dt class="col-sm-3">Name</dt>
+                <dd class="col-sm-9">@Model.VehicleName</dd>
+
+                <dt class="col-sm-3">Model</dt>
+                <dd class="col-sm-9">@Model.VehicleModel</dd>
+
+                <dt class="col-sm-3">Price</dt>
+                <dd class="col-sm-9">R @Model.VehiclePrice</dd>
+
+                <dt class="col-sm-3">Type</dt>
+                <dd class="col-sm-9">
+                    <span class="badge bg-info text-dark">
+                        @Model.VehicleType
+                    </span>
+                </dd>
+
+            </dl>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                ← Back to List
+            </a>
+
+        </div>
+    </div>
 </div>
